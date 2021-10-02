@@ -46,6 +46,10 @@ Class MaFrame{
 
     define("UPLOAD_PATH", PUBLIC_PATH . "uploads" . DS);
 
+    define("PRESIDEN", PUBLIC_PATH . "YNTKTS" . DS);
+
+    define("WAKIL_PRESIDEN", PUBLIC_PATH . "silent/is/gold" . DS);
+
         // Load configuration file
 
     require CONFIG_PATH . "config.php";

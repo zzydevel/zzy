@@ -38,6 +38,25 @@ Class Request{
 		}
 		return $m;
 	}
+	public function delete($name,$empty = false,$isset = false)
+	{
+		if($isset == true)
+		{
+			$m = isset($delete[''.$name.'']);
+		}elseif($empty == true)
+		{
+			$m = empty($delete[''.$name.'']);
+		}elseif($empty == true && $isset == true )
+		{
+			$m = isset($delete[''.$name.'']) && empty($delete[''.$name.'']);
+		}elseif($empty == false && $isset == false)
+		{
+			$m = $delete[''.$name.''];
+		}else{
+			$m = $delete[''.$name.''];
+		}
+		return $m;
+	}
 	public function session($name)
 	{
 		if(empty($_SESSION[''.$name.'']))
