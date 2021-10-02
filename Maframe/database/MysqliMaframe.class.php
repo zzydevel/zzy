@@ -38,14 +38,14 @@ Class MysqliMaframe{
         $r = mysqli_error($this->conn);
         return $r;
     }
-    public function select($table,$kolom = '*')
+    public function select($table,$column = '*')
     {
-        $sql = "SELECT $kolom FROM $table";
+        $sql = "SELECT $column FROM $table";
         return $this->query($sql);
     }
-    public function select_where($table,$where = array(),$kolom = '*')
+    public function select_where($table,$where = array(),$column = '*')
     {
-        $sql = "SELECT $kolom FROM $table WHERE";
+        $sql = "SELECT $column FROM $table WHERE";
         $n=0;
         $j=count($where)-1;
         foreach($where as $tb=>$cl)

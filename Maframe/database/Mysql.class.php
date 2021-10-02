@@ -24,23 +24,23 @@ class Mysql{
 
      * Constructor, to connect to database, select database and set charset
 
-     * @param $config string configuration array
+     * @param $env string configuration array
 
      */
 
-    public function __construct($config = array()){
+    public function __construct($env = array()){
 
-        $host = isset($config['host'])? $config['host'] : 'localhost';
+        $host = isset($env['host'])? $env['host'] : 'localhost';
 
-        $user = isset($config['user'])? $config['user'] : 'root';
+        $user = isset($env['user'])? $env['user'] : 'root';
 
-        $password = isset($config['password'])? $config['password'] : 'koko';
+        $password = isset($env['password'])? $env['password'] : 'koko';
 
-        $dbname = isset($config['dbname'])? $config['dbname'] : 'inv';
+        $dbname = isset($env['dbname'])? $env['dbname'] : 'inv';
 
-        $port = isset($config['port'])? $config['port'] : '';
+        $port = isset($env['port'])? $env['port'] : '';
 
-        $charset = isset($config['charset'])? $config['charset'] : '';
+        $charset = isset($env['charset'])? $env['charset'] : '';
 
        
 

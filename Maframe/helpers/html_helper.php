@@ -68,4 +68,18 @@ function show_error($msg)
 	}
 }
 
+function randomDigits(){
+    $digits = "";
+    $numbers = range(0,9);
+    shuffle($numbers);
+    for($i = 0;$i < 3;$i++) {
+        $digits .= $numbers[$i];
+    }
+    return $digits;
+}
+
+function ceilKg($number){
+    return ceil($number/1000);
+}
+
 ?>
